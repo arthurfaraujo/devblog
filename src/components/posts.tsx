@@ -21,9 +21,9 @@ export default function Posts() {
   return (
     <div className="p-6">
       <ul className="w-full flex flex-col items-center gap-4">
-        {posts.map((post, index) => (
+        {posts.map((post) => (
           <Post
-            key={index}
+            key={post.title}
             author={post.author}
             title={post.title}
             date={post.date}
@@ -38,11 +38,11 @@ function Post({
   author,
   title,
   date
-}: {
+}: Readonly<{
   author: string
   title: string
   date: string
-}) {
+}>) {
   return (
     <li className="w-8/12">
       <h1 className="w-fit text-[1.1rem] hover:underline hover:cursor-pointer">

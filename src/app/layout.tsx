@@ -1,13 +1,16 @@
 import { ReactNode } from 'react'
 import { RxHamburgerMenu } from 'react-icons/rx'
 import { TbDeviceDesktopCode } from 'react-icons/tb'
+import '@/styles/globals.css'
 
-export default function Layout({ children }: { children: ReactNode }) {
+export default function Layout({
+  children
+}: Readonly<{ children: ReactNode }>) {
   return (
     <>
       <header className="bg-[#161b22] w-full">
         <nav className="flex justify-between p-4">
-          <div className="flex justify-between items-center gap-6">
+          <div className="flex justify-between items-center gap-6 cursor-pointer">
             <TbDeviceDesktopCode fontSize={'1.8rem'} />
             <h1 className="text-lg">devBlog</h1>
           </div>
